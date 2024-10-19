@@ -60,6 +60,7 @@
             color: rgb(170, 107, 228);
         }
 
+        /* Hero Section */
         .hero {
             display: flex;
             justify-content: space-between;
@@ -117,6 +118,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
+        /* Work Experience Section */
         .work-experience {
             padding: 100px 10%;
             background-color: rgb(18, 18, 62);
@@ -154,6 +156,7 @@
             transform: scale(1.05);
         }
 
+        /* Footer Section */
         footer {
             background-color: rgb(10, 10, 40);
             padding: 20px 50px;
@@ -162,6 +165,7 @@
             font-size: 1rem;
         }
 
+        /* Modal Styles */
         .modal {
             display: none;
             position: fixed;
@@ -224,8 +228,8 @@
         <ul>
             <li><a href="#hero">Home</a></li>
             <li><a href="#experience">Work Experience</a></li>
-            <!-- Changed this to open a new profile page -->
-            <li><a href="profile.html" target="_blank">Profile</a></li> <!-- Link to profile.html -->
+            <!-- Updated Profile link to open profile.html in a new tab -->
+            <li><a href="profile.html" target="_blank">Profile</a></li>
             <li><a href="javascript:void(0)" onclick="showContact()">Contact Me</a></li>
         </ul>
     </nav>
@@ -277,31 +281,24 @@
             <div class="contact-info">
                 <p>Email: svardhman@gmail.com</p>
                 <p>Phone: +91 9860733808</p>
-                <p>LinkedIn: <a href="https://linkedin.com/in/vardhman-shaha" style="color: rgb(170, 107, 228);">linkedin.com/in/vardhman-shaha</a></p>
-                <p>GitHub: <a href="https://github.com/vardhman-shaha/vshaha" style="color: rgb(170, 107, 228);">github.com/vardhman-shaha/vshaha</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/vardhman-shaha" style="color: rgb(170, 107, 228);" target="_blank">linkedin.com/in/vardhman-shaha</a></p>
+                <p>GitHub: <a href="https://github.com/vardhman-shaha/vshaha" style="color: rgb(170, 107, 228);" target="_blank">github.com/vardhman-shaha/vshaha</a></p>
             </div>
         </div>
     </div>
 
     <script>
         function showContact() {
-            document.getElementById('contactModal').style.display = "block";
+            document.getElementById('contactModal').style.display = 'block';
         }
 
         function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
-        }
-
-        window.onclick = function (event) {
-            var contactModal = document.getElementById("contactModal");
-            if (event.target == contactModal) {
-                contactModal.style.display = "none";
-            }
+            document.getElementById(modalId).style.display = 'none';
         }
 
         function downloadResume() {
             const link = document.createElement('a');
-            link.href = 'Vardhman_Resume.pdf'; // Replace with actual resume file path
+            link.href = 'resume.pdf';
             link.download = 'Vardhman_Resume.pdf';
             link.click();
         }
