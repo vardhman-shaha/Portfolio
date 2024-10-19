@@ -156,27 +156,6 @@
             transform: scale(1.05);
         }
 
-        /* Profile Section */
-        #profile {
-            padding: 50px 10%;
-            background-color: rgb(20, 20, 70);
-            display: none;
-        }
-
-        #profile h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 30px;
-            font-weight: 700;
-            color: rgb(170, 107, 228);
-        }
-
-        #profile p {
-            font-size: 1.2rem;
-            text-align: center;
-            color: rgb(200, 200, 255);
-        }
-
         /* Footer Section */
         footer {
             background-color: rgb(10, 10, 40);
@@ -198,6 +177,46 @@
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.8);
             padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: rgb(30, 30, 70);
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: rgb(170, 107, 228);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .contact-details {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            user-select: text;
+            cursor: text;
+        }
+
+        .resume-download {
+            text-align: center;
+            margin: 40px 0;
         }
     </style>
 </head>
@@ -228,14 +247,6 @@
     <div class="resume-download">
         <button onclick="downloadResume()" class="cta">Download My Resume</button>
     </div>
-
-    <!-- Profile Section -->
-    <section id="profile">
-        <h2>Profile</h2>
-        <p>Explore my professional journey and skills.</p>
-        <p><strong>LinkedIn Profile:</strong> <a href="https://linkedin.com/in/vardhman-shaha" style="color: rgb(170, 107, 228);">linkedin.com/in/vardhman-shaha</a></p>
-        <p><strong>GitHub Profile:</strong> <a href="https://github.com/vardhman-shaha/vshaha" style="color: rgb(170, 107, 228);">github.com/vardhman-shaha/vshaha</a></p>
-    </section>
 
     <section id="experience" class="work-experience">
         <h2>Work Experience & Skills</h2>
@@ -275,6 +286,33 @@
         </div>
     </div>
 
+    <!-- Modal for Profile -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('profileModal')">&times;</span>
+            <h2>Profile</h2>
+            <p class="contact-details">Explore my professional journey and skills.</p>
+            <p><strong>LinkedIn Profile:</strong> <a href="https://linkedin.com/in/vardhman-shaha" style="color: rgb(170, 107, 228);">linkedin.com/in/vardhman-shaha</a></p>
+            <p><strong>GitHub Profile:</strong> <a href="https://github.com/vardhman-shaha/vshaha" style="color: rgb(170, 107, 228);">github.com/vardhman-shaha/vshaha</a></p>
+        </div>
+    </div>
+
+    <!-- Modal for Work Experience -->
+    <div id="workExperienceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('workExperienceModal')">&times;</span>
+            <h2>Work Experience</h2>
+            <div class="contact-details contact-info">
+                Here you can list your detailed work experiences:
+                <br><br>
+                <a href="https://linkedin.com/in/vardhman-shaha" target="_blank" style="color: rgb(170, 107, 228);">View my LinkedIn Profile</a>
+                <br><br>
+                <a href="https://github.com/vardhman-shaha/vshaha" target="_blank" style="color: rgb(170, 107, 228);">View my GitHub Profile</a>
+                <br><br>
+            </div>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <script>
@@ -297,8 +335,11 @@
         }
 
         function showProfile() {
-            document.getElementById('profile').style.display = "block";
-            document.getElementById('profile').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('profileModal').style.display = "block";
+        }
+
+        function showWorkExperience() {
+            document.getElementById('workExperienceModal').style.display = "block";
         }
 
         function closeModal(modalId) {
@@ -307,8 +348,16 @@
 
         window.onclick = function(event) {
             var contactModal = document.getElementById("contactModal");
+            var workModal = document.getElementById("workExperienceModal");
+            var profileModal = document.getElementById("profileModal");
             if (event.target == contactModal) {
                 contactModal.style.display = "none";
+            }
+            if (event.target == workModal) {
+                workModal.style.display = "none";
+            }
+            if (event.target == profileModal) {
+                profileModal.style.display = "none";
             }
         }
     </script>
