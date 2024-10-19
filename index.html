@@ -118,6 +118,48 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
+        /* Profile Section */
+        .profile {
+            padding: 100px 10%;
+            background-color: rgb(18, 18, 62);
+        }
+
+        .profile h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+            color: rgb(170, 107, 228);
+        }
+
+        .profile p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: rgb(220, 220, 255);
+        }
+
+        .profile .profile-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .profile .profile-details div {
+            background-color: rgb(30, 30, 70);
+            padding: 20px;
+            border-radius: 10px;
+            width: 45%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile .profile-details div h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: rgb(170, 107, 228);
+        }
+
         /* Work Experience Section */
         .work-experience {
             padding: 100px 10%;
@@ -228,8 +270,7 @@
         <ul>
             <li><a href="#hero">Home</a></li>
             <li><a href="#experience">Work Experience</a></li>
-            <!-- Updated Profile link to open profile.html in a new tab -->
-            <li><a href="profile.html" target="_blank">Profile</a></li>
+            <li><a href="#profile">Profile</a></li>
             <li><a href="javascript:void(0)" onclick="showContact()">Contact Me</a></li>
         </ul>
     </nav>
@@ -249,38 +290,42 @@
         <button onclick="downloadResume()" class="cta">Download My Resume</button>
     </div>
 
-    <section id="experience" class="work-experience">
-        <h2>Work Experience & Skills</h2>
-        <div class="skills">
-            <div class="skill">Docker</div>
-            <div class="skill">Kubernetes</div>
-            <div class="skill">Jenkins</div>
-            <div class="skill">Ansible</div>
-            <div class="skill">Terraform</div>
-            <div class="skill">Git</div>
-            <div class="skill">Linux</div>
-            <div class="skill">CI/CD</div>
-            <div class="skill">AWS</div>
-            <div class="skill">Helm</div>
-            <div class="skill">Python</div>
-            <div class="skill">Prometheus</div>
-            <div class="skill">Grafana</div>
+    <!-- Profile Section -->
+    <section id="profile" class="profile">
+        <h2>Profile</h2>
+        <p>With over 8 years of experience as a DevOps Engineer, I specialize in automating complex infrastructure, CI/CD pipelines, and improving team collaboration through cloud-based solutions.</p>
+        <div class="profile-details">
+            <div>
+                <h3>LinkedIn</h3>
+                <p>Find my professional connections and experience details on my LinkedIn profile:</p>
+                <p><a href="https://linkedin.com/in/vardhman-shaha" style="color: rgb(170, 107, 228);">linkedin.com/in/vardhman-shaha</a></p>
+            </div>
+            <div>
+                <h3>GitHub</h3>
+                <p>Check out my open-source contributions and projects on GitHub:</p>
+                <p><a href="https://github.com/vardhman-shaha/vshaha" style="color: rgb(170, 107, 228);">github.com/vardhman-shaha/vshaha</a></p>
+            </div>
         </div>
     </section>
 
-    <footer>
-        © 2024 Vardhman | DevOps Engineer Portfolio
-    </footer>
+    <!-- Work Experience Section -->
+    <section id="experience" class="work-experience">
+        <h2>Work Experience</h2>
+        <div class="skills">
+            <span class="skill">CI/CD</span>
+            <span class="skill">Cloud Infrastructure</span>
+            <span class="skill">Automation</span>
+            <span class="skill">Kubernetes</span>
+            <span class="skill">Terraform</span>
+        </div>
+    </section>
 
-    <!-- Modal for Contact Information -->
+    <!-- Contact Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('contactModal')">&times;</span>
-            <h2>Contact Me</h2>
-            <p class="contact-details">Feel free to reach out via:</p>
-            <div class="contact-info">
-                <p>Email: svardhman@gmail.com</p>
-                <p>Phone: +91 9860733808</p>
+            <div class="contact-details">
+                <p>Contact me via email: <span class="contact-info">vardhman.shaha@example.com</span></p>
                 <p>LinkedIn: <a href="https://linkedin.com/in/vardhman-shaha" style="color: rgb(170, 107, 228);" target="_blank">linkedin.com/in/vardhman-shaha</a></p>
                 <p>GitHub: <a href="https://github.com/vardhman-shaha/vshaha" style="color: rgb(170, 107, 228);" target="_blank">github.com/vardhman-shaha/vshaha</a></p>
             </div>
