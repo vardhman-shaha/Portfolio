@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vardhman - Profile</title>
+    <title>Profile - Vardhman</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -19,7 +19,6 @@
             background-color: rgb(15, 15, 60);
             color: white;
             font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
         }
 
         nav {
@@ -60,39 +59,21 @@
             color: rgb(170, 107, 228);
         }
 
-        /* Profile Section */
-        .profile {
+        .profile-container {
             padding: 100px 10%;
             text-align: center;
         }
 
-        .profile h1 {
+        .profile-container h1 {
             font-size: 3rem;
             margin-bottom: 20px;
             color: rgb(170, 107, 228);
         }
 
-        .profile p {
+        .profile-container p {
             font-size: 1.2rem;
-            margin: 20px 0;
-            line-height: 1.6;
+            margin: 10px 0;
             color: rgb(200, 200, 255);
-        }
-
-        .contact-links {
-            margin-top: 20px;
-        }
-
-        .contact-links a {
-            color: rgb(170, 107, 228);
-            font-size: 1.2rem;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .contact-links a:hover {
-            color: rgb(153, 153, 226);
         }
 
         footer {
@@ -101,6 +82,9 @@
             color: rgb(170, 107, 228);
             text-align: center;
             font-size: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -111,26 +95,19 @@
         <div class="brand">Vardhman</div>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about-me.html">About</a></li> <!-- New About Me link -->
             <li><a href="index.html#experience">Work Experience</a></li>
             <li><a href="profile.html">Profile</a></li>
             <li><a href="javascript:void(0)" onclick="showContact()">Contact Me</a></li>
         </ul>
     </nav>
 
-    <section class="profile">
-        <h1>My Profile</h1>
-        <p>
-            I am Vardhman, a passionate DevOps Engineer with over 8 years of experience. I specialize in automating infrastructure, implementing CI/CD pipelines, and deploying scalable cloud solutions.
-        </p>
-        <p>
-            Throughout my career, I have worked with tools such as Docker, Kubernetes, Jenkins, Ansible, Terraform, and AWS to deliver efficient and high-quality solutions. I am constantly learning new technologies to stay ahead in the industry and provide innovative solutions to complex problems.
-        </p>
-        <div class="contact-links">
-            <a href="https://linkedin.com/in/vardhman-shaha" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/vardhman-shaha/vshaha" target="_blank">GitHub</a>
-        </div>
-    </section>
+    <div class="profile-container">
+        <h1>Vardhman Shaha</h1>
+        <p>DevOps Engineer & Web Developer</p>
+        <p>A passionate professional with over 8 years of experience in automating infrastructure, managing CI/CD pipelines, and delivering high-quality software solutions.</p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vardhman-shaha" style="color: rgb(170, 107, 228);">linkedin.com/in/vardhman-shaha</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/vardhman-shaha/vshaha" style="color: rgb(170, 107, 228);">github.com/vardhman-shaha/vshaha</a></p>
+    </div>
 
     <footer>
         © 2024 Vardhman | DevOps Engineer Portfolio
